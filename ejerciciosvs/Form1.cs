@@ -16,5 +16,21 @@ namespace ejerciciosvs
         {
             InitializeComponent();
         }
+
+        private void lblEdad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdan_Click(object sender, EventArgs e)
+        {
+            int Edad = int.Parse(txtEdad.Text);
+            //ESTRUCTURA DE COMTROL ...
+            //IF condicional. si cumple se ejecuta el bloque de codigo. 
+            if (Edad >= 18)
+            {
+                MessageBox.Show("Bienvenido eres responsable de tus acciones.");
+            }
+        }
     }
 }
