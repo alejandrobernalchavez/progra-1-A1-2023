@@ -1,0 +1,10 @@
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.csproj.AssemblyReference.cache
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.Form1.resources
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.Properties.Resources.resources
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.csproj.GenerateResource.cache
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\bin\Debug\ejerciciosvs.exe.config
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\bin\Debug\ejerciciosvs.exe
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\bin\Debug\ejerciciosvs.pdb
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.exe
+C:\Users\Estudiante\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.pdb

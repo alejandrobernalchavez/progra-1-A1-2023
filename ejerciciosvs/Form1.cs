@@ -17,20 +17,36 @@ namespace ejerciciosvs
             InitializeComponent();
         }
 
-        private void lblEdad_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void btnEdan_Click(object sender, EventArgs e)
+        private void bTNCONVERTIRCONVESORES_Click(object sender, EventArgs e)
         {
-            int Edad = int.Parse(txtEdad.Text);
-            //ESTRUCTURA DE COMTROL ...
-            //IF condicional. si cumple se ejecuta el bloque de codigo. 
-            if (Edad >= 18)
-            {
-                MessageBox.Show("Bienvenido eres responsable de tus acciones.");
-            }
+            int de = 0, a = 0;
+            double cantidad = 0, respuesta = 0;
+            de = cboConversores.SelectedIndex;
+            a = cboCantidad.SelectedIndex;
+
+            cantidad = double.Parse(txtCantidadConversores.Text);
+            /*
+            Dolar
+            Euro
+            Quetzalez
+            Lempiras
+            Colones sv
+            Cordoba
+            Pesos CR
+            Yen
+            Libras esterlinas
+            Rupia india
+            */
+
+            double[] monedas = { 1, 0.92, 7.86, 24.66, 8.75, 36.58, 535.14, 145.47, 0.79, 83.29 };
+            respuesta = monedas[a] / monedas[de] * cantidad;
+
+            lblRespuesta.Text = "Respuesta: " + Math.Round(respuesta, 3);
+
         }
     }
 }
+
+    
