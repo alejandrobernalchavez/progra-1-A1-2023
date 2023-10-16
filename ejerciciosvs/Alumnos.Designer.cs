@@ -57,6 +57,7 @@ namespace ejerciciosvs
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbEdicioAlumnos.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
             this.grbDatosAlumnos.SuspendLayout();
@@ -119,7 +120,7 @@ namespace ejerciciosvs
             // btnModificarAlumnos
             // 
             this.btnModificarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarAlumnos.Location = new System.Drawing.Point(117, 38);
+            this.btnModificarAlumnos.Location = new System.Drawing.Point(108, 38);
             this.btnModificarAlumnos.Name = "btnModificarAlumnos";
             this.btnModificarAlumnos.Size = new System.Drawing.Size(93, 31);
             this.btnModificarAlumnos.TabIndex = 1;
@@ -130,7 +131,7 @@ namespace ejerciciosvs
             // btnNuevoAlumnos
             // 
             this.btnNuevoAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoAlumnos.Location = new System.Drawing.Point(36, 37);
+            this.btnNuevoAlumnos.Location = new System.Drawing.Point(18, 37);
             this.btnNuevoAlumnos.Name = "btnNuevoAlumnos";
             this.btnNuevoAlumnos.Size = new System.Drawing.Size(75, 32);
             this.btnNuevoAlumnos.TabIndex = 0;
@@ -217,7 +218,6 @@ namespace ejerciciosvs
             this.grbDatosAlumnos.TabIndex = 15;
             this.grbDatosAlumnos.TabStop = false;
             this.grbDatosAlumnos.Text = "Datos Alumnos";
-            
             // 
             // txtTelefonoAlumnos
             // 
@@ -259,7 +259,6 @@ namespace ejerciciosvs
             this.txtCodigoAlumnos.ReadOnly = true;
             this.txtCodigoAlumnos.Size = new System.Drawing.Size(193, 20);
             this.txtCodigoAlumnos.TabIndex = 3;
-            
             // 
             // label4
             // 
@@ -299,7 +298,7 @@ namespace ejerciciosvs
             this.telefono});
             this.grdDatosAlumnos.Location = new System.Drawing.Point(557, 127);
             this.grdDatosAlumnos.Name = "grdDatosAlumnos";
-            this.grdDatosAlumnos.Size = new System.Drawing.Size(400, 277);
+            this.grdDatosAlumnos.Size = new System.Drawing.Size(418, 277);
             this.grdDatosAlumnos.TabIndex = 14;
             this.grdDatosAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatosAlumnos_CellClick);
             // 
@@ -339,11 +338,23 @@ namespace ejerciciosvs
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(268, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 30);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 450);
+            this.ClientSize = new System.Drawing.Size(987, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscarAlumnos);
             this.Controls.Add(this.cboOpcionBuscarAlumnos);
             this.Controls.Add(this.label2);
@@ -353,6 +364,7 @@ namespace ejerciciosvs
             this.Controls.Add(this.grdDatosAlumnos);
             this.Name = "Alumnos";
             this.Text = "Alumnos";
+            this.Load += new System.EventHandler(this.Alumnos_Load);
             this.grbEdicioAlumnos.ResumeLayout(false);
             this.grbNavegacionAlumnos.ResumeLayout(false);
             this.grbNavegacionAlumnos.PerformLayout();
@@ -394,5 +406,6 @@ namespace ejerciciosvs
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.Button button1;
     }
 }

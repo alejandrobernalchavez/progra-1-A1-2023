@@ -354,7 +354,7 @@ namespace ejerciciosvs
             this.Controls.Add(this.grbNavegacionMateria);
             this.Controls.Add(this.grbDatosMateria);
             this.Controls.Add(this.grdDatosMaterias);
-            this.ForeColor = System.Drawing.Color.Red;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Materia";
             this.Text = "Materias";
             this.Load += new System.EventHandler(this.Materia_Load);

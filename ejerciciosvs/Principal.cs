@@ -40,6 +40,13 @@ namespace ejerciciosvs
         {
             Close();
         }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Alumnos objAlumnos = new Alumnos();
+            objAlumnos.MdiParent = this;
+            objAlumnos.Show();
+        }
     }
 }
 

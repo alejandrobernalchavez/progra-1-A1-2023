@@ -32,7 +32,7 @@ namespace ejerciciosvs
         {
             miDs.Clear();
             miDs = objConexion.obtenerDatos();
-            miTabla = miDs.Tables["Alumno"];
+            miTabla = miDs.Tables["alumnos"];
             miTabla.PrimaryKey = new DataColumn[] { miTabla.Columns["idAlumno"] };
             mostrarAlumnos();
             mostrarDatosAlumno();
@@ -48,7 +48,7 @@ namespace ejerciciosvs
             {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = grdDatosAlumnos.DataSource;
-                bs.Filter = opcion == 0 ? "codigo=" + valor : "Alumno like '%" + valor + "%'";
+                bs.Filter = opcion == 0 ? "codigo=" + valor : "nombre like '%" + valor + "%'";
                 grdDatosAlumnos.DataSource = bs;
                 //erpAlumno.SetError(txtBuscarAlumnos, "");
             }
@@ -130,6 +130,7 @@ namespace ejerciciosvs
                 String[] Alumnos = new string[] {
                     accion,txtCodigoAlumnos.Text, txtNombreAlumnos.Text, txtDireccionAlumnos.Text,txtTelefonoAlumnos.Text,
                     miTabla.Rows[posicion].ItemArray[0].ToString()
+
                 };
                 String msg = objConexion.mantenimientoAlumnos(Alumnos);
                 if (msg != "1")
@@ -231,5 +232,7 @@ namespace ejerciciosvs
         {
             Close();
         }
+
+       
     }
 }

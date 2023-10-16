@@ -26,14 +26,14 @@ namespace ejerciciosvs
             miDs.Clear();
             miComando.Connection = miConexion;
 
-            miComando.CommandText = "select * from Materia";
+            miComando.CommandText = "select * from materia";
             miAdaptador.SelectCommand = miComando;
-            miAdaptador.Fill(miDs, "Materia");
+            miAdaptador.Fill(miDs, "materia");
 
-            miComando.Connection = miConexion;
 
-            miComando.CommandText = "select * from Alumno";
+            miComando.CommandText = "select * from alumnos";
             miAdaptador.SelectCommand = miComando;
+            miAdaptador.Fill(miDs, "alumnos");
 
             return miDs;
         }
