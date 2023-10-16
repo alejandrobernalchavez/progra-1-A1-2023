@@ -21,3 +21,4 @@ C:\Users\Hades\source\repos\progra-1-A1-2023\ejerciciosvs\bin\Debug\db_academico
 C:\Users\Hades\source\repos\progra-1-A1-2023\ejerciciosvs\bin\Debug\db_academico_log.ldf
 C:\Users\Hades\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.Principal.resources
 C:\Users\Hades\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.Materia.resources
+C:\Users\Hades\source\repos\progra-1-A1-2023\ejerciciosvs\obj\Debug\ejerciciosvs.Alumnos.resources

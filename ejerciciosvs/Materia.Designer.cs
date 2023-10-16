@@ -53,7 +53,7 @@ namespace ejerciciosvs
             this.btnModificarMateria = new System.Windows.Forms.Button();
             this.btnNuevoMateria = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboOpcionBuscarMateria = new System.Windows.Forms.ComboBox();
             this.txtBuscarMaterias = new System.Windows.Forms.TextBox();
             this.erpMateria = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosMaterias)).BeginInit();
@@ -75,6 +75,7 @@ namespace ejerciciosvs
             this.grdDatosMaterias.Name = "grdDatosMaterias";
             this.grdDatosMaterias.Size = new System.Drawing.Size(387, 277);
             this.grdDatosMaterias.TabIndex = 0;
+            this.grdDatosMaterias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatosMaterias_CellClick);
             // 
             // idMateria
             // 
@@ -202,7 +203,6 @@ namespace ejerciciosvs
             this.btnUltimaMateria.TabIndex = 7;
             this.btnUltimaMateria.Text = ">|";
             this.btnUltimaMateria.UseVisualStyleBackColor = true;
-            this.btnUltimaMateria.Click += new System.EventHandler(this.btnUltimaMateria_Click);
             // 
             // btnSiguienteMateria
             // 
@@ -232,7 +232,7 @@ namespace ejerciciosvs
             this.btnPrimeromateria.TabIndex = 4;
             this.btnPrimeromateria.Text = "|<";
             this.btnPrimeromateria.UseVisualStyleBackColor = true;
-            this.btnPrimeromateria.Click += new System.EventHandler(this.btnPrimeromateria_Click);
+            this.btnPrimeromateria.Click += new System.EventHandler(this.btnPrimeroMateria_Click);
             // 
             // grbEdicionMateria
             // 
@@ -256,7 +256,7 @@ namespace ejerciciosvs
             this.btnEliminarMaterias.TabIndex = 2;
             this.btnEliminarMaterias.Text = "Eliminar";
             this.btnEliminarMaterias.UseVisualStyleBackColor = true;
-            this.btnEliminarMaterias.Click += new System.EventHandler(this.btnEliminarMaterias_Click);
+            this.btnEliminarMaterias.Click += new System.EventHandler(this.btnEliminarMateria_Click);
             // 
             // btnModificarMateria
             // 
@@ -289,17 +289,17 @@ namespace ejerciciosvs
             this.label2.TabIndex = 4;
             this.label2.Text = "Buscar:";
             // 
-            // comboBox1
+            // cboOpcionBuscarMateria
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nombre",
-            "Codigo"});
-            this.comboBox1.Location = new System.Drawing.Point(669, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cboOpcionBuscarMateria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboOpcionBuscarMateria.FormattingEnabled = true;
+            this.cboOpcionBuscarMateria.Items.AddRange(new object[] {
+            "Codigo",
+            "Nombre"});
+            this.cboOpcionBuscarMateria.Location = new System.Drawing.Point(669, 38);
+            this.cboOpcionBuscarMateria.Name = "cboOpcionBuscarMateria";
+            this.cboOpcionBuscarMateria.Size = new System.Drawing.Size(126, 21);
+            this.cboOpcionBuscarMateria.TabIndex = 5;
             // 
             // txtBuscarMaterias
             // 
@@ -307,8 +307,7 @@ namespace ejerciciosvs
             this.txtBuscarMaterias.Name = "txtBuscarMaterias";
             this.txtBuscarMaterias.Size = new System.Drawing.Size(136, 20);
             this.txtBuscarMaterias.TabIndex = 6;
-            this.txtBuscarMaterias.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtBuscarMaterias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            this.txtBuscarMaterias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarMaterias_KeyUp);
             // 
             // erpMateria
             // 
@@ -320,7 +319,7 @@ namespace ejerciciosvs
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 371);
             this.Controls.Add(this.txtBuscarMaterias);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboOpcionBuscarMateria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grbEdicionMateria);
             this.Controls.Add(this.grbNavegacionMateria);
@@ -356,7 +355,7 @@ namespace ejerciciosvs
         private System.Windows.Forms.Button btnModificarMateria;
         private System.Windows.Forms.Button btnNuevoMateria;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboOpcionBuscarMateria;
         private System.Windows.Forms.TextBox txtBuscarMaterias;
         private System.Windows.Forms.TextBox txtUv;
         private System.Windows.Forms.TextBox txtNombr;

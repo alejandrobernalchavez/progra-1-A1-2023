@@ -26,9 +26,9 @@ namespace ejerciciosvs
             miDs.Clear();
             miComando.Connection = miConexion;
 
-            miComando.CommandText = "select * from materias";
+            miComando.CommandText = "select * from Materia";
             miAdaptador.SelectCommand = miComando;
-            miAdaptador.Fill(miDs, "materias");
+            miAdaptador.Fill(miDs, "Materia");
             return miDs;
         }
 
@@ -37,17 +37,17 @@ namespace ejerciciosvs
             String sql = "";
             if (materias[0] == "nuevo")
             {
-                sql = "INSERT INTO materias (codigo, materia, uv) VALUES('" + materias[1] + "', '" + materias[2] + "', '" +
+                sql = "INSERT INTO Materia (codigo, materia, uv) VALUES('" + materias[1] + "', '" + materias[2] + "', '" +
                     materias[3] + "')";
             }
             else if (materias[0] == "modificar")
             {
-                sql = "UPDATE materias SET codigo='" + materias[1] + "', materia='" + materias[2] + "', uv='" + materias[3] +
+                sql = "UPDATE Materia SET codigo='" + materias[1] + "', materia='" + materias[2] + "', uv='" + materias[3] +
                     "' WHERE idMateria='" + materias[4] + "'";
             }
             else if (materias[0] == "eliminar")
             {
-                sql = "DELETE FROM materias WHERE idMateria='" + materias[4] + "'";
+                sql = "DELETE FROM Materia WHERE idMateria='" + materias[4] + "'";
             }
             return ejecutarSql(sql);
         }

@@ -31,7 +31,7 @@ namespace ejerciciosvs
         {
             miDs.Clear();
             miDs = objConexion.obtenerDatos();
-            miTabla = miDs.Tables["materias"];
+            miTabla = miDs.Tables["Materia"];
             miTabla.PrimaryKey = new DataColumn[] { miTabla.Columns["idMateria"] };
             mostrarMaterias();
             mostrarDatosMateria();
@@ -85,7 +85,7 @@ namespace ejerciciosvs
             }
         }
 
-        private void btnUltimoMateria_ClickbtnUltimoMateria_Click(object sender, EventArgs e)
+        private void btnUltimaMateria_ClickbtnUltimoMateria_Click(object sender, EventArgs e)
         {
             posicion = miTabla.Rows.Count - 1;
             mostrarDatosMateria();
@@ -178,7 +178,7 @@ namespace ejerciciosvs
 
         private void txtBuscarMaterias_KeyUp(object sender, KeyEventArgs e)
         {
-            filtrarMaterias(txtBuscarMaterias.Text, cboOpcionBuscarMate.SelectedIndex);
+            filtrarMaterias(txtBuscarMaterias.Text, cboOpcionBuscarMateria.SelectedIndex);
             if (e.KeyValue == 13)
             {//tecla enter
                 seleccionarMateria();
@@ -217,8 +217,9 @@ namespace ejerciciosvs
             }
         }
 
+        
+        
 
-
-
+        
     }
 }

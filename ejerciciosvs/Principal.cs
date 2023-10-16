@@ -35,6 +35,11 @@ namespace ejerciciosvs
             objMaterias.MdiParent = this;
             objMaterias.Show();
         }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 
