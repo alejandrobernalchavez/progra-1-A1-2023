@@ -43,6 +43,8 @@ namespace ejerciciosvs
             this.btnAnteriorAlumnos = new System.Windows.Forms.Button();
             this.btnPrimeroAumnos = new System.Windows.Forms.Button();
             this.grbDatosAlumnos = new System.Windows.Forms.GroupBox();
+            this.txtTelefonoAlumnos = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtDireccionAlumnos = new System.Windows.Forms.TextBox();
             this.txtNombreAlumnos = new System.Windows.Forms.TextBox();
             this.txtCodigoAlumnos = new System.Windows.Forms.TextBox();
@@ -50,12 +52,11 @@ namespace ejerciciosvs
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdDatosAlumnos = new System.Windows.Forms.DataGridView();
-            this.idMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTelefonoAlumnos = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbEdicioAlumnos.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
             this.grbDatosAlumnos.SuspendLayout();
@@ -68,6 +69,7 @@ namespace ejerciciosvs
             this.txtBuscarAlumnos.Name = "txtBuscarAlumnos";
             this.txtBuscarAlumnos.Size = new System.Drawing.Size(136, 20);
             this.txtBuscarAlumnos.TabIndex = 20;
+            this.txtBuscarAlumnos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarAlumnos_KeyUp);
             // 
             // cboOpcionBuscarAlumnos
             // 
@@ -112,6 +114,7 @@ namespace ejerciciosvs
             this.btnEliminarAlumnos.TabIndex = 2;
             this.btnEliminarAlumnos.Text = "Eliminar";
             this.btnEliminarAlumnos.UseVisualStyleBackColor = true;
+            this.btnEliminarAlumnos.Click += new System.EventHandler(this.btnEliminarAlumno_Click);
             // 
             // btnModificarAlumnos
             // 
@@ -122,6 +125,7 @@ namespace ejerciciosvs
             this.btnModificarAlumnos.TabIndex = 1;
             this.btnModificarAlumnos.Text = "Modificar";
             this.btnModificarAlumnos.UseVisualStyleBackColor = true;
+            this.btnModificarAlumnos.Click += new System.EventHandler(this.btnModificarAlumno_Click);
             // 
             // btnNuevoAlumnos
             // 
@@ -132,6 +136,7 @@ namespace ejerciciosvs
             this.btnNuevoAlumnos.TabIndex = 0;
             this.btnNuevoAlumnos.Text = "Nuevo";
             this.btnNuevoAlumnos.UseVisualStyleBackColor = true;
+            this.btnNuevoAlumnos.Click += new System.EventHandler(this.btnNuevoAlumno_Click);
             // 
             // grbNavegacionAlumnos
             // 
@@ -164,7 +169,7 @@ namespace ejerciciosvs
             this.btnUltimaAlumnos.TabIndex = 7;
             this.btnUltimaAlumnos.Text = ">|";
             this.btnUltimaAlumnos.UseVisualStyleBackColor = true;
-            this.btnUltimaAlumnos.Click += new System.EventHandler(this.btnUltimaAlumnos_Click);
+            this.btnUltimaAlumnos.Click += new System.EventHandler(this.btnUltimaAlumno_ClickbtnUltimoAlumno_Click);
             // 
             // btnSiguienteAlumnos
             // 
@@ -174,6 +179,7 @@ namespace ejerciciosvs
             this.btnSiguienteAlumnos.TabIndex = 6;
             this.btnSiguienteAlumnos.Text = ">";
             this.btnSiguienteAlumnos.UseVisualStyleBackColor = true;
+            this.btnSiguienteAlumnos.Click += new System.EventHandler(this.btnSiguienteAlumno_Click);
             // 
             // btnAnteriorAlumnos
             // 
@@ -183,6 +189,7 @@ namespace ejerciciosvs
             this.btnAnteriorAlumnos.TabIndex = 5;
             this.btnAnteriorAlumnos.Text = "<";
             this.btnAnteriorAlumnos.UseVisualStyleBackColor = true;
+            this.btnAnteriorAlumnos.Click += new System.EventHandler(this.btnAnteriorAlumno_Click);
             // 
             // btnPrimeroAumnos
             // 
@@ -192,6 +199,7 @@ namespace ejerciciosvs
             this.btnPrimeroAumnos.TabIndex = 4;
             this.btnPrimeroAumnos.Text = "|<";
             this.btnPrimeroAumnos.UseVisualStyleBackColor = true;
+            this.btnPrimeroAumnos.Click += new System.EventHandler(this.btnPrimeroAlumno_Click);
             // 
             // grbDatosAlumnos
             // 
@@ -209,7 +217,24 @@ namespace ejerciciosvs
             this.grbDatosAlumnos.TabIndex = 15;
             this.grbDatosAlumnos.TabStop = false;
             this.grbDatosAlumnos.Text = "Datos Alumnos";
-            this.grbDatosAlumnos.Enter += new System.EventHandler(this.grbDatosAlumno_Enter);
+            
+            // 
+            // txtTelefonoAlumnos
+            // 
+            this.txtTelefonoAlumnos.Location = new System.Drawing.Point(77, 152);
+            this.txtTelefonoAlumnos.Name = "txtTelefonoAlumnos";
+            this.txtTelefonoAlumnos.ReadOnly = true;
+            this.txtTelefonoAlumnos.Size = new System.Drawing.Size(193, 20);
+            this.txtTelefonoAlumnos.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Telefono";
             // 
             // txtDireccionAlumnos
             // 
@@ -234,7 +259,7 @@ namespace ejerciciosvs
             this.txtCodigoAlumnos.ReadOnly = true;
             this.txtCodigoAlumnos.Size = new System.Drawing.Size(193, 20);
             this.txtCodigoAlumnos.TabIndex = 3;
-            this.txtCodigoAlumnos.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            
             // 
             // label4
             // 
@@ -267,22 +292,24 @@ namespace ejerciciosvs
             // 
             this.grdDatosAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatosAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMateria,
+            this.idAlumno,
             this.codigo,
             this.nombre,
-            this.uv});
-            this.grdDatosAlumnos.Location = new System.Drawing.Point(557, 122);
+            this.direccion,
+            this.telefono});
+            this.grdDatosAlumnos.Location = new System.Drawing.Point(557, 127);
             this.grdDatosAlumnos.Name = "grdDatosAlumnos";
-            this.grdDatosAlumnos.Size = new System.Drawing.Size(387, 277);
+            this.grdDatosAlumnos.Size = new System.Drawing.Size(400, 277);
             this.grdDatosAlumnos.TabIndex = 14;
+            this.grdDatosAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatosAlumnos_CellClick);
             // 
-            // idMateria
+            // idAlumno
             // 
-            this.idMateria.DataPropertyName = "idMateria";
-            this.idMateria.HeaderText = "ID";
-            this.idMateria.Name = "idMateria";
-            this.idMateria.ReadOnly = true;
-            this.idMateria.Visible = false;
+            this.idAlumno.DataPropertyName = "idAlumno";
+            this.idAlumno.HeaderText = "ID";
+            this.idAlumno.Name = "idAlumno";
+            this.idAlumno.ReadOnly = true;
+            this.idAlumno.Visible = false;
             // 
             // codigo
             // 
@@ -293,34 +320,24 @@ namespace ejerciciosvs
             // 
             // nombre
             // 
-            this.nombre.DataPropertyName = "materia";
+            this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "NOMBRE";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
-            // uv
+            // direccion
             // 
-            this.uv.DataPropertyName = "uv";
-            this.uv.HeaderText = "UV";
-            this.uv.Name = "uv";
-            this.uv.ReadOnly = true;
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "DIRECCION";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
             // 
-            // txtTelefonoAlumnos
+            // telefono
             // 
-            this.txtTelefonoAlumnos.Location = new System.Drawing.Point(77, 152);
-            this.txtTelefonoAlumnos.Name = "txtTelefonoAlumnos";
-            this.txtTelefonoAlumnos.ReadOnly = true;
-            this.txtTelefonoAlumnos.Size = new System.Drawing.Size(193, 20);
-            this.txtTelefonoAlumnos.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Telefono";
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "TELEFONO";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
             // 
             // Alumnos
             // 
@@ -370,11 +387,12 @@ namespace ejerciciosvs
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grdDatosAlumnos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMateria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uv;
         private System.Windows.Forms.TextBox txtTelefonoAlumnos;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAlumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
     }
 }

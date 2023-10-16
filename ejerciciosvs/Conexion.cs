@@ -29,8 +29,16 @@ namespace ejerciciosvs
             miComando.CommandText = "select * from Materia";
             miAdaptador.SelectCommand = miComando;
             miAdaptador.Fill(miDs, "Materia");
+
+            miComando.Connection = miConexion;
+
+            miComando.CommandText = "select * from Alumno";
+            miAdaptador.SelectCommand = miComando;
+
             return miDs;
         }
+
+
 
         public String mantenimientoMaterias(String[] materias)
         {
@@ -48,6 +56,25 @@ namespace ejerciciosvs
             else if (materias[0] == "eliminar")
             {
                 sql = "DELETE FROM Materia WHERE idMateria='" + materias[4] + "'";
+            }
+            return ejecutarSql(sql);
+        }
+        public String mantenimientoAlumnos(String[] alumnos)
+        {
+            String sql = "";
+            if (alumnos[0] == "nuevo")
+            {
+                sql = "INSERT INTO alumnos (codigo, nombre, direccion, telefono) VALUES('" + alumnos[1] + "', '" + alumnos[2] + "', '" +
+                    alumnos[3]+"', '"+ alumnos[4]+ "')";
+            }
+            else if (alumnos[0] == "modificar")
+            {
+                sql = "UPDATE alumnos SET codigo='" + alumnos[1] + "', nombre='" + alumnos[2] + "', direccion='" + alumnos[3] +"'telefono='"+
+                 alumnos[4]+   "' WHERE idAlunmo='" + alumnos[5] + "'";
+            }
+            else if (alumnos[0] == "eliminar")
+            {
+                sql = "DELETE FROM alumnos WHERE idAlumno='" + alumnos[5] + "'";
             }
             return ejecutarSql(sql);
         }

@@ -12,6 +12,7 @@ namespace ejerciciosvs
 {
     public partial class Materia : Form
     {
+
         Conexion objConexion = new Conexion();
         DataSet miDs = new DataSet();
         DataTable miTabla = new DataTable();
@@ -217,9 +218,9 @@ namespace ejerciciosvs
             }
         }
 
-        
-        
-
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

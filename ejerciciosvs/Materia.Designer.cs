@@ -56,6 +56,8 @@ namespace ejerciciosvs
             this.cboOpcionBuscarMateria = new System.Windows.Forms.ComboBox();
             this.txtBuscarMaterias = new System.Windows.Forms.TextBox();
             this.erpMateria = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosMaterias)).BeginInit();
             this.grbDatosMateria.SuspendLayout();
             this.grbNavegacionMateria.SuspendLayout();
@@ -114,6 +116,7 @@ namespace ejerciciosvs
             this.grbDatosMateria.Controls.Add(this.label4);
             this.grbDatosMateria.Controls.Add(this.label3);
             this.grbDatosMateria.Controls.Add(this.label1);
+            this.grbDatosMateria.ForeColor = System.Drawing.Color.Black;
             this.grbDatosMateria.Location = new System.Drawing.Point(12, 12);
             this.grbDatosMateria.Name = "grbDatosMateria";
             this.grbDatosMateria.Size = new System.Drawing.Size(542, 220);
@@ -179,6 +182,7 @@ namespace ejerciciosvs
             this.grbNavegacionMateria.Controls.Add(this.btnSiguienteMateria);
             this.grbNavegacionMateria.Controls.Add(this.btnAnteriorMateria);
             this.grbNavegacionMateria.Controls.Add(this.btnPrimeromateria);
+            this.grbNavegacionMateria.ForeColor = System.Drawing.Color.Black;
             this.grbNavegacionMateria.Location = new System.Drawing.Point(28, 252);
             this.grbNavegacionMateria.Name = "grbNavegacionMateria";
             this.grbNavegacionMateria.Size = new System.Drawing.Size(219, 83);
@@ -239,6 +243,7 @@ namespace ejerciciosvs
             this.grbEdicionMateria.Controls.Add(this.btnEliminarMaterias);
             this.grbEdicionMateria.Controls.Add(this.btnModificarMateria);
             this.grbEdicionMateria.Controls.Add(this.btnNuevoMateria);
+            this.grbEdicionMateria.ForeColor = System.Drawing.Color.Black;
             this.grbEdicionMateria.Location = new System.Drawing.Point(253, 252);
             this.grbEdicionMateria.Name = "grbEdicionMateria";
             this.grbEdicionMateria.Size = new System.Drawing.Size(301, 97);
@@ -283,6 +288,7 @@ namespace ejerciciosvs
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(620, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -313,11 +319,34 @@ namespace ejerciciosvs
             // 
             this.erpMateria.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(68, 341);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 31);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(28, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(12, 8);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Materia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 371);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscarMaterias);
             this.Controls.Add(this.cboOpcionBuscarMateria);
             this.Controls.Add(this.label2);
@@ -325,6 +354,7 @@ namespace ejerciciosvs
             this.Controls.Add(this.grbNavegacionMateria);
             this.Controls.Add(this.grbDatosMateria);
             this.Controls.Add(this.grdDatosMaterias);
+            this.ForeColor = System.Drawing.Color.Red;
             this.Name = "Materia";
             this.Text = "Materias";
             this.Load += new System.EventHandler(this.Materia_Load);
@@ -368,5 +398,7 @@ namespace ejerciciosvs
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn uv;
         private System.Windows.Forms.ErrorProvider erpMateria;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
